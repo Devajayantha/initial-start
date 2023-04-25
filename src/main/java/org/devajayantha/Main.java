@@ -3,7 +3,7 @@ package org.devajayantha;
 public class Main {
     public static String[] models = new String[10];
     public static void main(String[] args) {
-        testAddTodoList();
+        testRemoveTodoList();
 
         System.out.println("Hello world!");
     }
@@ -74,6 +74,38 @@ public class Main {
         for (var counter = 0; counter < 15; counter++) {
             addTodoList("Buy Stuff " + counter);
         }
+
+        showTodoList();
+    }
+
+    /**
+     * Remove todo list
+     * @param number
+     *
+     * @return boolean
+     */
+    public static boolean removeTodoList(Integer number) {
+        if ((number - 1) >= models.length) {
+            return false;
+        } else if (models[number - 1] == null) {
+            return false;
+        }
+
+        models[number - 1] = null;
+
+        return true;
+    }
+
+    /**
+     * Test remove todo list
+     */
+    public static void testRemoveTodoList() {
+        addTodoList("Buy milk");
+        addTodoList("Buy bread");
+        addTodoList("Buy eggs");
+
+        var result = removeTodoList(3);
+        System.out.println(result);
 
         showTodoList();
     }

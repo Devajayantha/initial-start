@@ -2,10 +2,27 @@ package org.devajayantha;
 
 public class Main {
     public static String[] models = new String[10];
+
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testRemoveTodoList();
+        testInput();
 
         System.out.println("Hello world!");
+    }
+
+    public static String input(String info) {
+        System.out.print(info + " : ");
+        String data = scanner.nextLine();
+
+        return data;
+    }
+
+    public static void testInput() {
+        var name = input("Name");
+        var address = input("Address");
+
+        System.out.println("Hi " + name);
+        System.out.println("You live in " + address);
     }
 
     /**

@@ -5,7 +5,7 @@ public class Main {
 
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testViewAddTodoList();
+        testViewRemoveTodoList();
 
         System.out.println("Hello world!");
     }
@@ -176,8 +176,36 @@ public class Main {
         return true;
     }
 
+    /**
+     * View remove todo list
+     */
     public static void viewRemoveTodoList() {
-        //
+        System.out.println("REMOVE TODO");
+
+        var input = input("Number (x if cancel)");
+
+        if (!input.equals("x")) {
+            var isRemoved = removeTodoList(Integer.valueOf(input));
+
+            if (!isRemoved) {
+                System.out.println("Failed to remove todo (number not found) " + input);
+            }
+        }
+    }
+
+    /**
+     * Test view remove todo list
+     */
+    public static void testViewRemoveTodoList() {
+        addTodoList("Buy milk");
+        addTodoList("Buy bread");
+        addTodoList("Buy eggs");
+
+        showTodoList();
+
+        viewRemoveTodoList();
+
+        showTodoList();
     }
 
     /**

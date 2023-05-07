@@ -5,7 +5,7 @@ public class Main {
 
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testViewShowTodoList();
+        testViewAddTodoList();
 
         System.out.println("Hello world!");
     }
@@ -42,7 +42,7 @@ public class Main {
     /**
      * View show list
      */
-    public  static void vieShowTodoList(){
+    public  static void viewShowTodoList(){
         while (true) {
             showTodoList();
 
@@ -73,7 +73,7 @@ public class Main {
         addTodoList("Buy bread");
         addTodoList("Buy eggs");
 
-        vieShowTodoList();
+        viewShowTodoList();
     }
 
     /**
@@ -121,8 +121,17 @@ public class Main {
         }
     }
 
+    /**
+     * View add todo list
+     */
     public static void viewAddTodoList() {
+        System.out.println("ADD TODO");
 
+        var todo = input("Todo (x if cancel)");
+
+        if (!todo.equals("x")) {
+            addTodoList(todo);
+        }
     }
 
     /**
@@ -132,6 +141,19 @@ public class Main {
         for (var counter = 0; counter < 15; counter++) {
             addTodoList("Buy Stuff " + counter);
         }
+
+        showTodoList();
+    }
+
+    /**
+     * Test view add todo list
+     */
+    public  static void testViewAddTodoList() {
+        addTodoList("Buy milk");
+        addTodoList("Buy bread");
+        addTodoList("Buy eggs");
+
+        viewAddTodoList();
 
         showTodoList();
     }

@@ -5,7 +5,7 @@ public class Main {
 
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testInput();
+        testViewShowTodoList();
 
         System.out.println("Hello world!");
     }
@@ -37,6 +37,43 @@ public class Main {
                 System.out.println(no + ". " + todo);
             }
         }
+    }
+
+    /**
+     * View show list
+     */
+    public  static void vieShowTodoList(){
+        while (true) {
+            showTodoList();
+
+            System.out.println("MENU : ");
+            System.out.println("1. Add");
+            System.out.println("2. Remove");
+            System.out.println("x. Exit");
+
+            var input = input("Choose");
+
+            if (input.equals("1")) {
+                viewAddTodoList();
+            } else if (input.equals("2")) {
+                viewRemoveTodoList();
+            } else if (input.equals("x")) {
+                break;
+            } else {
+                System.out.println("Wrong input");
+            }
+        }
+    }
+
+    /**
+     * Test view show list
+     */
+    public  static void testViewShowTodoList() {
+        addTodoList("Buy milk");
+        addTodoList("Buy bread");
+        addTodoList("Buy eggs");
+
+        vieShowTodoList();
     }
 
     /**
@@ -84,6 +121,10 @@ public class Main {
         }
     }
 
+    public static void viewAddTodoList() {
+
+    }
+
     /**
      * Test add todo list
      */
@@ -111,6 +152,10 @@ public class Main {
         models[number - 1] = null;
 
         return true;
+    }
+
+    public static void viewRemoveTodoList() {
+        //
     }
 
     /**

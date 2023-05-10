@@ -19,4 +19,8 @@ public class Person {
     void sayHello(String name) {
         System.out.println("Hello " + name + ", my name is " + this.name);
     }
+
+    String getStatus() {
+        return String.valueOf("active");
+    }
 }

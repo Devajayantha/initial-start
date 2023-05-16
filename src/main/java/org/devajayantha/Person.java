@@ -17,7 +17,7 @@ public class Person {
     Person() {}
 
     void sayHello(String name) {
-        System.out.println("Hello " + name + ", my name is " + this.name);
+        System.out.println("Hello Person " + name + ", my name is " + this.name);
     }
 
     String getStatus() {

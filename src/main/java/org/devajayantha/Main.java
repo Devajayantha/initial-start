@@ -6,15 +6,13 @@ public class Main {
         TodoStarted todoStarted = new TodoStarted();
         todoStarted.viewShowTodoList();
           **/
-         Person person = new Person("Devajayantha");
-         person.sayHello("budi");
 
-         person = new Employee("Deva");
-         person.sayHello("budi 2");
+         Employee employee = new Employee("Deva");
+         employee.sayHello("agus");
+         System.out.println(employee.name);
+         Person person = (Employee) employee;
+         person.sayHello("agus 2");
 
-         person = new Manager("Deva 2");
-         person.sayHello("budi 3");
-
-        System.out.println("Hello world!");
+         System.out.println("Hello world!");
     }
 }

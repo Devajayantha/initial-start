@@ -7,11 +7,8 @@ public class Main {
         todoStarted.viewShowTodoList();
           **/
 
-         Employee employee = new Employee("Deva");
-         employee.sayHello("agus");
-         System.out.println(employee.name);
-         Person person = (Employee) employee;
-         person.sayHello("agus 2");
+         Employee employee = new Employee("Devajayantha");
+         System.out.println(employee);
 
          System.out.println("Hello world!");
     }

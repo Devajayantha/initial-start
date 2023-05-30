@@ -8,7 +8,9 @@ public class Main {
           **/
 
          Employee employee = new Employee("Devajayantha");
-         System.out.println(employee);
+         Manager manager = new Manager("Devajayanthap");
+
+         System.out.println(employee.equals(manager));
 
          System.out.println("Hello world!");
     }

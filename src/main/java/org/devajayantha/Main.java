@@ -12,6 +12,8 @@ public class Main {
 
          System.out.println(employee.equals(manager));
 
+         System.out.println(employee.hashCode());
+
          System.out.println("Hello world!");
     }
 }

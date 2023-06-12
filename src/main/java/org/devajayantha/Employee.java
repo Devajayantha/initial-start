@@ -9,6 +9,7 @@ public class Employee extends Person{
         return "Employee name is "+ name;
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (obj instanceof Employee) {
             Employee employee = (Employee) obj;
@@ -16,5 +17,10 @@ public class Employee extends Person{
         }
 
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

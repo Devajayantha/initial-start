@@ -1,5 +1,7 @@
 package org.devajayantha;
 
+import org.devajayantha.enums.Level;
+import org.devajayantha.models.Student;
 import org.devajayantha.records.LoginRequest;
 
 public class Main {
@@ -22,5 +24,12 @@ public class Main {
 
         System.out.println(loginRequest);
         System.out.println(loginRequest.username());
+
+        Level levelName = Level.valueOf("REGULAR");
+        System.out.println(levelName);
+
+        Student student = new Student("Deva", Level.REGULAR.toString());
+
+        System.out.println(student.type);
     }
 }

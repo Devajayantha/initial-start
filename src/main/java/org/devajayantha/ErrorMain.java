@@ -4,16 +4,11 @@ import org.devajayantha.error.ValidationException;
 
 public class ErrorMain {
     public static void main(String[] args) {
-        ErrorMain errorMain = new ErrorMain();
-
         try {
-            errorMain.run();
-        } catch (ValidationException exception) {
-            System.out.println("Error : " + exception.getMessage());
-        } catch (NullPointerException exception) {
-            System.out.println("Error : " + exception.getMessage());
+            sampleError();
+        } catch (RuntimeException exception) {
+            exception.printStackTrace();
         }
-
     }
 
     protected void run() throws ValidationException {
@@ -24,5 +19,19 @@ public class ErrorMain {
         }
 
         System.out.println("Program is running");
+    }
+
+    public static void sampleError() {
+        try {
+            String[] names = {
+                    "Deva",
+                    "Jaya",
+                    "Ntha"
+            };
+
+            System.out.println(names[100]);
+        } catch (Throwable throwable) {
+            throw new RuntimeException(throwable);
+        }
     }
 }

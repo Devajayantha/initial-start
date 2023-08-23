@@ -1,6 +1,8 @@
-package org.devajayantha;
+package org.devajayantha.models;
 
-public class Manager extends Employee implements HasJob{
+import org.devajayantha.HasJob;
+
+public class Manager extends Employee implements HasJob {
 
     Manager(String name) {
         super(name);

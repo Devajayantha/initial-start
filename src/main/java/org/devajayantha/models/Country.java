@@ -1,4 +1,4 @@
-package org.devajayantha;
+package org.devajayantha.models;
 
 public class Country {
     private String name;

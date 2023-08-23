@@ -1,4 +1,4 @@
-package org.devajayantha;
+package org.devajayantha.models;
 
 public class Employee extends Person{
     Employee(String name) {

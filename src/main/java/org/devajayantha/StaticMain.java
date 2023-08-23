@@ -1,6 +1,8 @@
 package org.devajayantha;
 
 import static org.devajayantha.data.Constant.*; // import all static members
+
+import org.devajayantha.models.Country;
 import org.devajayantha.utils.MathUtil;
 
 public class StaticMain {

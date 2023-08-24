@@ -1,4 +1,4 @@
-package org.devajayantha.data;
+package org.devajayantha.standart.data;
 
 public class Constant {
     public  static final   String APPLICATION = "Todo";

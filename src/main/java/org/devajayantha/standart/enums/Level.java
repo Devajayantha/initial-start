@@ -1,4 +1,4 @@
-package org.devajayantha.enums;
+package org.devajayantha.standart.enums;
 
 public enum Level {
     REGULAR,

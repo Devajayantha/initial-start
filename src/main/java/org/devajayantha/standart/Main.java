@@ -1,8 +1,8 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
-import org.devajayantha.enums.Level;
-import org.devajayantha.models.Student;
-import org.devajayantha.records.LoginRequest;
+import org.devajayantha.standart.enums.Level;
+import org.devajayantha.standart.models.Student;
+import org.devajayantha.standart.records.LoginRequest;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
 import java.util.Objects;
 

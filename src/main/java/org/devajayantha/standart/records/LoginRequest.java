@@ -1,4 +1,4 @@
-package org.devajayantha.records;
+package org.devajayantha.standart.records;
 
 public record LoginRequest(String username, String password) {
 

@@ -1,6 +1,6 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
-import org.devajayantha.error.ValidationException;
+import org.devajayantha.standart.error.ValidationException;
 
 public class ErrorMain {
     public static void main(String[] args) {

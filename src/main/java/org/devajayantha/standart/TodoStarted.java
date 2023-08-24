@@ -1,4 +1,4 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
 /**
  * Section 1 : create todo list application.

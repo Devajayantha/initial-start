@@ -1,4 +1,4 @@
-package org.devajayantha.utils;
+package org.devajayantha.standart.utils;
 
 public class MathUtil {
     public static int sum(int... values) {

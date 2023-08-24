@@ -1,4 +1,4 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
 public interface HasJob {
     public void currentProject(String name);

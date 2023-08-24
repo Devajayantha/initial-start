@@ -1,4 +1,4 @@
-package org.devajayantha.models;
+package org.devajayantha.standart.models;
 
 public class Student {
     public String name;

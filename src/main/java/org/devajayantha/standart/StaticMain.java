@@ -1,9 +1,9 @@
-package org.devajayantha;
+package org.devajayantha.standart;
 
-import static org.devajayantha.data.Constant.*; // import all static members
+import static org.devajayantha.standart.data.Constant.*; // import all static members
 
-import org.devajayantha.models.Country;
-import org.devajayantha.utils.MathUtil;
+import org.devajayantha.standart.models.Country;
+import org.devajayantha.standart.utils.MathUtil;
 
 public class StaticMain {
     public static void main(String[] args) {

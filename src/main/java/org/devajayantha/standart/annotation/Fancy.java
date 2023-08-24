@@ -1,4 +1,4 @@
-package org.devajayantha.annotation;
+package org.devajayantha.standart.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

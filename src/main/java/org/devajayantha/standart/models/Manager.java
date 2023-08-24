@@ -1,6 +1,6 @@
-package org.devajayantha.models;
+package org.devajayantha.standart.models;
 
-import org.devajayantha.HasJob;
+import org.devajayantha.standart.HasJob;
 
 public class Manager extends Employee implements HasJob {
 

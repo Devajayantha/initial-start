@@ -10,4 +10,41 @@ public class TodoListRepositoryImpl implements TodoListRepository{
     public Todolist[] getAll() {
         return data;
     }
+
+    @Override
+    public void add(Todolist todolist) {
+        resizeIfFull();
+
+        /** Add new data into array */
+        for (var counter = 0; counter < data.length; counter++) {
+            if (data[counter] == null) {
+                data[counter] = todolist;
+                break;
+            }
+        }
+    }
+
+    protected boolean isFull() {
+        var isFull = true;
+
+        for (var counter = 0; counter < data.length; counter++) {
+            if (data[counter] == null) {
+                isFull = false;
+                break;
+            }
+        }
+
+        return isFull;
+    }
+
+    protected void resizeIfFull() {
+        if (isFull()) {
+            var temp = data;
+            data = new Todolist[data.length * 2];
+
+            for (var counter = 0; counter < temp.length; counter++) {
+                data[counter] = temp[counter];
+            }
+        }
+    }
 }

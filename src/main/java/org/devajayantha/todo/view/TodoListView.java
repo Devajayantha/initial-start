@@ -21,7 +21,7 @@ public class TodoListView {
             System.out.println("2. Remove");
             System.out.println("x. Exit");
 
-            var input = InputUtil.input("Choose");
+            var input = InputUtil.input("Choose : ");
 
             if (input.equals("1")) {
                 addTodoList();
@@ -35,7 +35,15 @@ public class TodoListView {
         }
     }
 
-    public void addTodoList(){}
+    public void addTodoList(){
+        System.out.println("ADD TODO");
+
+        var todo = InputUtil.input("Todo (x if cancel) : ");
+
+        if (!todo.equals("x")) {
+            todoListService.addTodoList(todo);
+        }
+    }
 
     public  void removeTodoList(){}
 }

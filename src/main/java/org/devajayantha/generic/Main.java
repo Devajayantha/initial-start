@@ -9,5 +9,18 @@ public class Main {
         Pair<String, Integer> pair = new Pair<String, Integer>("Hello", 1);
 
         System.out.println(pair.getFirst());
+
+        System.out.println(count(new Integer[]{1, 2, 3, 4, 5}));
+
+        System.out.println(count(new String[]{"Eko", "Kurniawan", "Khannedy"}));
+    }
+
+    public static <T> int count(T[] array){
+        int count = 0;
+        for(T element : array){
+            count++;
+        }
+
+        return count;
     }
 }

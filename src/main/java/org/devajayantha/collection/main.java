@@ -6,11 +6,13 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) {
-        implementIterable();
+//        implementIterable();
+//
+//        implementCollection();
+//
+//        implementList();
 
-        implementCollection();
-
-        implementList();
+        implementImmutableList();
     }
 
     public static void implementCollection() {
@@ -43,5 +45,21 @@ public class main {
             System.out.println(value);
         }
     }
+
+    public static void implementImmutableList() {
+        Person person = new Person("Eko");
+
+        person.addHobby("Game");
+        person.addHobby("Coding");
+
+        List<String> hobbies = person.getHobbies();
+
+        for (var value : hobbies) {
+            System.out.println(value);
+        }
+
+        // hobbies.add("Bukan Hobby"); // error cause collection type immutable
+    }
+
 
 }

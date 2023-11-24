@@ -2,6 +2,8 @@ package org.devajayantha.lambda;
 
 import org.devajayantha.lambda.util.StringUtil;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -13,7 +15,9 @@ public class main {
 
         //trySecondExample();
 
-        tryThirdExample();
+        //tryThirdExample();
+
+        tryCollectionExample();
     }
 
     /** Lambda simple expressions */
@@ -56,5 +60,22 @@ public class main {
         Function<String, Integer> functionLegth = String::length;
 
         System.out.println(functionLegth.apply("Devajayantha"));
+    }
+
+    /** lambda expressions with collections. **/
+    protected static void tryCollectionExample() {
+        List<String> list = List.of("Devajayantha", "Dilshan", "Dilum", "Dilshan");
+
+        list.forEach(name -> System.out.println(name));
+
+        System.out.println("====================================");
+
+        List<String> names = new ArrayList<>();
+
+        names.addAll(list);
+
+        names.removeIf(name -> name.equals("Dilshan"));
+
+        names.forEach(System.out::println);
     }
 }
